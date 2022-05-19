@@ -1,0 +1,32 @@
+.button {
+    @include smooth-animation;
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0;
+    border-radius: 3rem;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &--dark {
+        color: $color-white;
+        background-color: $color-brand;
+
+        &:hover {
+            color: darken($color-white, 7%);
+        }
+    }
+
+    &--white {
+        color: $color-brand;
+        background-color: $color-white;
+
+        &:hover {
+            background-color: darken($color-white, 7%);
+        }
+    }
+}

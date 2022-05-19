@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+  font-size: 0.625rem;
+
+  @media screen and (min-width: $small) and (max-width: 1919px) {
+    font-size: calc(0.3rem + 0.28vw);
+  }
+
+  @media screen and (max-width: $small) {
+    font-size: calc(0.3rem + 1vw);
+  }
+}
+
+.max--width {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 4rem;
+
+    @include medium {
+      margin-right: 1.6rem;
+      margin-left: 1.6rem;
+      padding: 0;
+    }
+}
+
+.max--width--small {
+    max-width: $max-width-small;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @include medium {
+      margin-right: 1.6rem;
+      margin-left: 1.6rem;
+      padding: 0;
+    }
+}
+
+.max--width--smallest {
+    max-width: $max-width-smallest;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @include medium {
+      margin-right: 1.6rem;
+      margin-left: 1.6rem;
+      padding: 0;
+    }
+}

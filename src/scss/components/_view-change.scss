@@ -1,0 +1,47 @@
+.view-change {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 0 1.5rem;
+    background-color: $color-white;
+    border-radius: 3rem;
+
+    button {
+        margin: 0;
+        padding: 1rem;
+        background-color: $color-white;
+
+        svg {
+            width: 3rem;
+            height: 3rem
+        }
+
+        > * {
+            @include smooth-animation;
+            fill: $color-light-gray;
+        }
+
+        &:hover {
+            background-color: $color-white;
+        }
+    }
+
+    &.grid-view {
+        .button--grid {
+
+            > * {
+                fill: $color-brand;
+            }
+        }
+    }
+
+    &.list-view {
+        .button--list {
+
+            > * {
+                fill: $color-brand;
+            }
+        }
+    }
+}

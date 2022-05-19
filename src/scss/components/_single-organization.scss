@@ -1,0 +1,13 @@
+.single-organization {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+
+    img {
+        width: 6rem;
+    }
+    a {
+        font-size: 2rem;
+    }
+}

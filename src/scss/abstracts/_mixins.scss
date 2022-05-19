@@ -1,0 +1,19 @@
+// -------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -------------------------------------------------------------------------
+
+@mixin smooth-animation {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin small {
+    @media screen and (max-width: $small) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media screen and (max-width: $medium) {
+        @content;
+    }
+}

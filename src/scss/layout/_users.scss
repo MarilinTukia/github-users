@@ -1,0 +1,30 @@
+.users {
+
+    &__container {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+
+        &.grid-view {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+
+            @include medium {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include small {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        &.list-view {
+            display: flex;
+            gap: 1rem;
+            max-width: 100rem;
+            margin: 0 auto;
+            padding: 0 1.6rem;
+            flex-direction: column;
+        }
+    }
+}

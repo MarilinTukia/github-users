@@ -1,0 +1,89 @@
+.user-information {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    gap: 5rem;
+
+    @include small {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .main-info {
+        display: flex;
+        align-items: center;
+
+        @include small {
+            justify-content: center;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            svg {
+                height: 3rem;
+                width: 3rem;
+            }
+
+            h2 {
+                font-size: 3.6rem;
+            }
+        }
+
+        span {
+            height: 3rem;
+            width: 0.2rem;
+            margin: 0 2rem;
+            background-color: $color-text;
+        }
+    }
+
+    &__container {
+        display: flex;
+        gap: 10rem;
+
+        .image-container {
+            height: 40rem;
+            width: 40rem;
+
+            @include small {
+                height: 25rem;
+                width: 25rem;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .info-container {
+            width: calc(100% - 40rem);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            @include small {
+                width: 100%;
+            }
+
+            .repositories, .organizations {
+                h3 {
+                    margin: 2rem 0;
+                    font-size: 3rem;
+
+                    @include small {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
