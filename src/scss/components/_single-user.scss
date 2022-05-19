@@ -78,9 +78,15 @@
             margin-top: 0;
         }
 
-        p {
-            margin: 0.5rem 0;
-            font-size: 1.6rem;
+        ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+
+            li {
+                margin: 0.5rem 0;
+                font-size: 1.6rem;
+                word-break: break-word;
+            }
         }
     }
 

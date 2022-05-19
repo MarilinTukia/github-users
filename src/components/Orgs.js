@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Orgs = ({orgs}) => {
 const { login ,  avatar_url } = orgs;
 

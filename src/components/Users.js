@@ -76,7 +76,9 @@ const Users = () => {
                         </div>
                         <div className='single-user__repos'>
                             <span>User Repos</span>
-                            <Repositories user={element} />
+                            <ul>
+                                <Repositories user={element} />
+                            </ul>
                         </div>
                     </div>
                     )

@@ -34,15 +34,3 @@ html {
       padding: 0;
     }
 }
-
-.max--width--smallest {
-    max-width: $max-width-smallest;
-    margin: 0 auto;
-    padding: 0 2rem;
-
-    @include medium {
-      margin-right: 1.6rem;
-      margin-left: 1.6rem;
-      padding: 0;
-    }
-}

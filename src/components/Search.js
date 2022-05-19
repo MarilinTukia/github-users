@@ -13,17 +13,6 @@ const Search = () => {
       const response = await fetch(url);
       const foundUser = await response.json();
       navigate(`users/${foundUser.login}`, { replace: true }); 
-      localStorage.setItem(foundUser.login, JSON.stringify(foundUser.login));
-      const data = localStorage.getItem(foundUser.login);
-      console.log(JSON.parse(data));
-
-      var arr = [];
-      for (let i = 0; i < localStorage.length; i++) {
-         let storedValue = localStorage.key(i);
-         arr.push(storedValue);
-         console.log(arr);
-      }
-
    }
 
    return (
@@ -34,10 +23,6 @@ const Search = () => {
                <button className="button button--dark">Search</button>
             </div>
          </form>
-         {/* <div>{
-            arr.map( username => ( <div>{username}</div>))
-            }
-            </div> */}
       </>
    )
 }

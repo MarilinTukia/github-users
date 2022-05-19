@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Link, useParams} from 'react-router-dom';
-// import Repos from './Repos';
 import Orgs from './Orgs';
 import Repositories from './Repositories';
-
-
 
 const SingleUser = (props) => {
     const { username } = useParams();
@@ -39,35 +36,36 @@ const SingleUser = (props) => {
             </div>
             <Link className="button button--white" to={'/'}>Back to users</Link>
          </div>
-
-        <div className="user-information max--width--smallest">
-            <div className="main-info">
-                <a href={singleUser.html_url} target="_blank" rel="noreferrer">
-                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g id="about"><path d="M16,16A7,7,0,1,0,9,9,7,7,0,0,0,16,16ZM16,4a5,5,0,1,1-5,5A5,5,0,0,1,16,4Z"/><path d="M17,18H15A11,11,0,0,0,4,29a1,1,0,0,0,1,1H27a1,1,0,0,0,1-1A11,11,0,0,0,17,18ZM6.06,28A9,9,0,0,1,15,20h2a9,9,0,0,1,8.94,8Z"/></g></svg>
-                    <h2>{singleUser.name }</h2>
-                </a>
-                <span></span>
-                <p>Type: {singleUser.type}</p>
-            </div>
-            <div className="user-information__container">
-                <div className="image-container">
-                    <img src={singleUser.avatar_url } alt="User"/>
+        <div className="max--width--small">
+            <div className="user-information">
+                <div className="main-info">
+                    <a href={singleUser.html_url} target="_blank" rel="noreferrer">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g id="about"><path d="M16,16A7,7,0,1,0,9,9,7,7,0,0,0,16,16ZM16,4a5,5,0,1,1-5,5A5,5,0,0,1,16,4Z"/><path d="M17,18H15A11,11,0,0,0,4,29a1,1,0,0,0,1,1H27a1,1,0,0,0,1-1A11,11,0,0,0,17,18ZM6.06,28A9,9,0,0,1,15,20h2a9,9,0,0,1,8.94,8Z"/></g></svg>
+                        <h2>{singleUser.name }</h2>
+                    </a>
+                    <span></span>
+                    <p>Type: {singleUser.type}</p>
                 </div>
-                <div className="info-container">
-                    <div className="repositories">
-                        <h4>User Repos</h4>
-                        <Repositories user={singleUser} />
+                <div className="user-information__container">
+                    <div className="image-container">
+                        <img src={singleUser.avatar_url } alt="User"/>
                     </div>
-                    <div className="organizations">
-                        <h4>User Organizations</h4>
-                        { orgs.length ? (
-                            orgs.slice(0, 3).map ( orgs => {
-                                return (
-                                    <Orgs orgs={orgs} key={orgs.id}/>
-                                )
-                            })
-                            ) : ( <span>No Organizations for this user</span>
-                        )}
+                    <div className="info-container">
+                        <div className="repositories">
+                            <h4>User Repos</h4>
+                            <Repositories user={singleUser} />
+                        </div>
+                        <div className="organizations">
+                            <h4>User Organizations</h4>
+                            { orgs.length ? (
+                                orgs.slice(0, 3).map ( orgs => {
+                                    return (
+                                        <Orgs orgs={orgs} key={orgs.id}/>
+                                    )
+                                })
+                                ) : ( <span>No Organizations for this user</span>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>
